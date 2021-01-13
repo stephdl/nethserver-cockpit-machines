@@ -1,0 +1,21 @@
+#
+# 40virbr+
+# shorewall declaration for libvirt
+#
+
+virt    all     ACCEPT
+$FW     virt    ACCEPT
+
+{
+    use esmith::NetworksDB;
+    my $ndb = esmith::NetworksDB->open_ro();
+    # generate policy for blue zone
+    if ($ndb->blue) {
+        $OUT .= "blue    virt    ACCEPT\n";
+    }
+
+    # generate policy for orange zone
+    if ($ndb->orange) {
+        $OUT .= "orang   virt    REJECT info\n";
+    }
+}

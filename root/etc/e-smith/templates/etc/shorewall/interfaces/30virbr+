@@ -1,0 +1,7 @@
+#
+# 30 virbr+
+# shorewall declaration for libvirt
+#
+
+virt            virbr+          dhcp,routeback
+virt            vnet+           destonly

@@ -1,0 +1,5 @@
+#
+# 25virbr+
+# shorewall declaration for libvirt
+
+virt    ipv4
