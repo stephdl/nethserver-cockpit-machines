@@ -1,0 +1,10 @@
+#!/usr/bin/perl -w
+
+use esmith::Build::CreateLinks qw(:all);
+
+my $event = 'nethserver-cockpit-machines-update';
+event_actions ( $event, 'initialize-default-databases' => '00');
+
+event_services($event, qw(
+               libvirtd restart
+));

@@ -1,0 +1,1 @@
+# nethserver-cockpit-machines
