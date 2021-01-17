@@ -12,6 +12,9 @@ Requires: cockpit-machines
 Requires: virt-install
 Requires: qemu-kvm
 Requires: libvirt
+Requires: libvirt-daemon-kvm
+Requires: libvirt-dbus
+Requires: libvirt-glib
 BuildRequires: nethserver-devtools
 BuildArch: noarch
 
